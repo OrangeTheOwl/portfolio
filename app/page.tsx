@@ -1,6 +1,6 @@
-import ExperienceSection from "@/sections/experienceSection";
-import GallerySection from "@/sections/gallerySection";
-import ProjectsSection from "@/sections/projectsSection";
+import ExperienceSection from "@/sections/ExperienceSection";
+import GallerySection from "@/sections/GallerySection";
+import ProjectsSection from "@/sections/ProjectsSection";
 
 export default function Home() {
   return <main>
