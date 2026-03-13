@@ -3,30 +3,43 @@ import { Experience } from "@/types/experience";
 export const experiences: Experience[] = [
   {
     id: 'company-1',
-    company: 'Tech Solutions Inc.',
-    companyLogo: '/images/experience/company1-logo.png',
-    position: 'Software Engineer',
-    startDate: new Date('2022-01-01'),
-    endDate: new Date('2023-12-31'),
+    company: 'Valji d.o.o.',
+    companyLogo: '/images/logos/valji.png',
+    position: 'Student Intern',
+    startDate: new Date('2020-05-04'),
+    endDate: new Date('2025-09-18'),
     responsibilities: [
-      'Developed and maintained web applications using React and Node.js',
-      'Collaborated with cross-functional teams to deliver high-quality software solutions'
+      'IT support and maintenance of company systems',
+      'Assisted in the development of internal tools and applications',
+      'Provided technical support to employees and resolved IT-related issues',
+      'Basic troubleshooting and problem-solving for software and hardware issues',
+      'Basic server and network administration tasks',
+      'Planning and building server rooms and network cabinets'
     ],
-    softwareSkills: ['React', 'Node.js', 'TypeScript'],
-    hardwareSkills: ['Docker', 'AWS']
+    softwareSkills: ['C#', 'C++', 'Python', 'MS SQL'],
+    hardwareSkills: ['PC building & hardware repair', 'Network cabling and infrastructure setup', 'Server rack and cabinet installation', 'Hardware troubleshooting']
   },
   {
     id: 'company-2',
-    company: 'Tech Solutions Inc.',
-    companyLogo: '/images/experience/company1-logo.png',
-    position: 'Software Engineer',
-    startDate: new Date('2022-01-01'),
-    endDate: new Date('2023-12-31'),
+    company: 'Fisofi',
+    companyLogo: '/images/logos/fisofi.png',
+    position: 'Full Stack Developer',
+    startDate: new Date('2025-09-18'),
+    endDate: new Date('2026-04-18'),
     responsibilities: [
-      'Developed and maintained web applications using React and Node.js',
-      'Collaborated with cross-functional teams to deliver high-quality software solutions'
+      'Leading a team of developers to create a user-friendly application',
+      'Development of a cross-platform mobile application using Flutter and Dart',
+      'Developing core application features',
+      'Integration with Firebase services',
+      'Implementation of new features and improvements based on user feedback',
+      'Maintenance and optimization of the application for performance and scalability',
+      'Deployment of the application to app stores and web platforms',
+      'Conducting code reviews and providing feedback to team members',
+      'Troubleshooting and debugging issues reported by users and providing timely resolutions',
+      'Creating and maintaining technical documentation for the application and its features',
+      'Conducting user testing and gathering feedback to improve the user experience',
     ],
-    softwareSkills: ['React', 'Node.js', 'TypeScript'],
-    hardwareSkills: ['Docker', 'AWS']
+    softwareSkills: ['Flutter (iOS, Android, Web)', 'Dart', 'JavaScript', 'Firebase/Firestore', 'Git', 'Google Cloud Platform', 'Stripe'],
+    hardwareSkills: []
   }
 ]
