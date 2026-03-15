@@ -5,7 +5,7 @@ export interface Project {
     techStack: string[];
     projectType: ProjectType;
     date: string;
-    githubUrl: string;
+    githubUrl?: string;
     liveDemoUrl?: string;
     images: string[];
 }

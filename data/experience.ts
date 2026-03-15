@@ -6,8 +6,8 @@ export const experiences: Experience[] = [
     company: 'Valji d.o.o.',
     companyLogo: '/images/logos/valji.png',
     position: 'Student Intern',
-    startDate: new Date('2020-05-04'),
-    endDate: new Date('2025-09-18'),
+    startDate: '2020-05-04',
+    endDate: '2025-09-18',
     responsibilities: [
       'IT support and maintenance of company systems',
       'Assisted in the development of internal tools and applications',
@@ -24,8 +24,8 @@ export const experiences: Experience[] = [
     company: 'Fisofi',
     companyLogo: '/images/logos/fisofi.png',
     position: 'Full Stack Developer',
-    startDate: new Date('2025-09-18'),
-    endDate: new Date('2026-04-18'),
+    startDate: '2025-09-18',
+    endDate: '2026-04-18',
     responsibilities: [
       'Leading a team of developers to create a user-friendly application',
       'Development of a cross-platform mobile application using Flutter and Dart',

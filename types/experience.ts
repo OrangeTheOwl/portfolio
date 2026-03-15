@@ -4,8 +4,8 @@ export interface Experience {
     companyLogo?: string;
     images?: string[];
     position: string;
-    startDate: Date;
-    endDate?: Date;
+    startDate: string;
+    endDate?: string;
     responsibilities: string[];
     softwareSkills?: string[];
     hardwareSkills?: string[];

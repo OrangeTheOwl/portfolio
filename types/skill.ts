@@ -3,7 +3,7 @@ export interface Skill {
     name: string;
     category: SkillCategory;
     proficiency: ProficiencyLevel;
-    icon: string;
+    icon?: string;
 }
 
 export enum SkillCategory {

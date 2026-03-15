@@ -1,10 +1,26 @@
 'use client';
 
+import { useState } from 'react';
 import { motion, Variants } from 'framer-motion';
 import ProjectCard from "@/components/cards/ProjectCard";
+import DetailsCard from "@/components/cards/DetailsCard";
+import SectionHeading from '@/components/ui/SectionHeading';
+import { UI_CONFIG } from '@/data/constants';
 import { projects } from "@/data/projects";
+import { getCopy, getTranslatedProject, Locale } from '@/lib/i18n';
+import { Project } from '@/types/project';
+import { Experience } from '@/types/experience';
 
-export default function ProjectsSection() {
+interface ProjectsSectionProps {
+  locale: Locale;
+}
+
+export default function ProjectsSection({ locale }: ProjectsSectionProps) {
+  // State to track which card is selected (can be Project or Experience)
+  const [selectedCard, setSelectedCard] = useState<Project | Experience | null>(null);
+  const text = getCopy(locale);
+  const localizedProjects = projects.map((project) => getTranslatedProject(project, locale));
+
   const item: Variants = {
     hidden: { 
       opacity: 0, 
@@ -33,47 +49,54 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section id="projects" className="min-h-screen py-20 bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header with Animation */}
-        <motion.div 
-          className="mb-16 text-center"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={headingVariant}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-900 mb-4">
-            Projects
-          </h2>
-          <p className="text-neutral-600 text-lg max-w-2xl mx-auto">
-            From hackathons to production apps - here's what I've built
-          </p>
-        </motion.div>
+    <>
+      <section id="projects" className="bg-white py-20 sm:py-24">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="mb-16"
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={headingVariant}
+          >
+            <SectionHeading
+              align="center"
+              eyebrow={text.sections.projects.eyebrow}
+              title={text.sections.projects.title}
+              description={text.sections.projects.description}
+            />
+          </motion.div>
 
-        {/* Projects Stack - Single Column */}
-        <div className="space-y-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ 
-                once: true,
-                margin: "-100px",
-                amount: 0.3,
-              }}
-              variants={item}
-            >
-              <ProjectCard 
-                project={project}
-                priority={index === 0} // First project loads immediately
-              />
-            </motion.div>
-          ))}
+          <div className="space-y-8">
+            {localizedProjects.slice(0, UI_CONFIG.maxProjectsOnHomepage).map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ 
+                  once: true,
+                  margin: "-100px",
+                  amount: 0.3,
+                }}
+                variants={item}
+              >
+                <ProjectCard 
+                  project={project}
+                  locale={locale}
+                  priority={index === 0} // First project loads immediately
+                  onCardClick={() => setSelectedCard(project)}
+                />
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <DetailsCard
+        item={selectedCard}
+        locale={locale}
+        onClose={() => setSelectedCard(null)}
+      />
+    </>
   );
 }

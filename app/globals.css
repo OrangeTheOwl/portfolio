@@ -7,6 +7,74 @@ html {
   scroll-behavior: smooth;
 }
 
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background: #111213;
+  color: #e5e7eb;
+}
+
+html.dark .bg-white {
+  background-color: #181a1b !important;
+}
+
+html.dark .bg-white\/90,
+html.dark .bg-white\/80 {
+  background-color: rgba(24, 26, 27, 0.88) !important;
+}
+
+html.dark .bg-neutral-50 {
+  background-color: #202325 !important;
+}
+
+html.dark .bg-neutral-100 {
+  background-color: #2a2d31 !important;
+}
+
+html.dark .border-neutral-100,
+html.dark .border-neutral-200 {
+  border-color: #3c4147 !important;
+}
+
+html.dark .text-dark-900 {
+  color: #f5f7f8 !important;
+}
+
+html.dark .text-neutral-700 {
+  color: #d5d9de !important;
+}
+
+html.dark .text-neutral-600,
+html.dark .text-neutral-500 {
+  color: #aeb6bf !important;
+}
+
+html.dark .hover\:bg-neutral-50:hover {
+  background-color: #2a2d31 !important;
+}
+
+html.dark .hover\:bg-neutral-100:hover {
+  background-color: #343841 !important;
+}
+
+html.dark .shadow-md,
+html.dark .shadow-lg,
+html.dark .shadow-sm,
+html.dark .shadow-xl,
+html.dark .shadow-2xl {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+html.dark .bg-gradient-to-b.from-white.via-white.to-neutral-50 {
+  background: linear-gradient(to bottom, #181a1b 0%, #17191a 55%, #202325 100%) !important;
+}
+
+html.dark .bg-gradient-to-br.from-neutral-100.via-white.to-primary-50 {
+  background: linear-gradient(135deg, #25292d 0%, #1c1f22 55%, #3a230f 100%) !important;
+}
+
 /* Respect user motion preferences */
 @media (prefers-reduced-motion: reduce) {
   html {

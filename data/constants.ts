@@ -1,8 +1,10 @@
+import { ProjectType } from "@/types/project";
+
 // ============================================
 // PERSONAL INFORMATION
 // ============================================
 export const PERSONAL_INFO = {
-  name: 'Your Full Name',
+  name: 'Vid Safranko',
   firstName:"Vid",
   lastName:"Šafranko",
   title: 'Full-Stack Developer & Infrastructure Engineer',
@@ -87,6 +89,34 @@ export const UI_CONFIG = {
 export const EXTERNAL_LINKS = {
   resume: '/resume.pdf',       // Download link in navbar
   sourceCode: 'https://github.com/yourusername/portfolio', // Link to portfolio source
+} as const;
+
+export const PROJECT_TYPE_STYLES: Record<ProjectType, { bg: string; text: string; border: string }> = {
+  [ProjectType.Personal]: {
+    bg: 'bg-blue-100',
+    text: 'text-blue-700',
+    border: 'border-blue-300',
+  },
+  [ProjectType.Professional]: {
+    bg: 'bg-green-100',
+    text: 'text-green-700',
+    border: 'border-green-300',
+  },
+  [ProjectType.OpenSource]: {
+    bg: 'bg-purple-100',
+    text: 'text-purple-700',
+    border: 'border-purple-300',
+  },
+  [ProjectType.Client]: {
+    bg: 'bg-accent-100',
+    text: 'text-accent-700',
+    border: 'border-accent-300',
+  },
+  [ProjectType.Hackathon]: {
+    bg: 'bg-primary-100',
+    text: 'text-primary-700',
+    border: 'border-primary-300',
+  },
 } as const;
 
 // ============================================

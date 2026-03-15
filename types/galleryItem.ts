@@ -6,7 +6,7 @@ export interface GalleryItem {
     image: string;
     images?: string[];
     tags?: string[]; 
-    date?: Date;
+    date?: string;
     externalLink?: string; // Optional link to project, article, etc.
 }
 
