@@ -8,6 +8,12 @@ interface MasonryGalleryProps {
     images: string[];
     altTextPrefix?: string;
     altTexts?: string[];
+    renderItem?: (params: {
+        src: string;
+        index: number;
+        alt: string;
+        aspectRatio: string | number;
+    }) => React.ReactNode;
     columns?: {
         mobile?: number;
         tablet?: number;
@@ -27,6 +33,7 @@ export default function MasonryGallery({
     images,
     altTextPrefix = 'Gallery image',
     altTexts,
+    renderItem,
     columns = { mobile: 1, tablet: 2, desktop: 3 },
     gap = 4,
     rounded = true,
@@ -44,6 +51,14 @@ export default function MasonryGallery({
         }),
         [columns.desktop, columns.mobile, columns.tablet],
     );
+
+    const imageSizes = useMemo(() => {
+        const mobileWidth = Math.min(100, Math.ceil(100 / safeColumns.mobile));
+        const tabletWidth = Math.min(100, Math.ceil(100 / safeColumns.tablet));
+        const desktopWidth = Math.min(100, Math.ceil(100 / safeColumns.desktop));
+
+        return `(max-width: 768px) ${mobileWidth}vw, (max-width: 1024px) ${tabletWidth}vw, ${desktopWidth}vw`;
+    }, [safeColumns.desktop, safeColumns.mobile, safeColumns.tablet]);
 
     useEffect(() => {
         let isMounted = true;
@@ -114,15 +129,18 @@ export default function MasonryGallery({
         <div key={columnIndex} className="flex flex-col" style={{ gap: gapStyle }}>
             {columnImages.map((imageItem) => {
                 const globalIndex = imageItem.originalIndex;
+                const aspectRatio = getAspectRatio(imageItem.src, globalIndex);
+                const altText = altTexts?.[globalIndex] || `${altTextPrefix} ${globalIndex + 1}`;
                 return (
                     <motion.div
                         key={`${imageItem.src}-${globalIndex}`}
                         className={`
-                            relative overflow-hidden bg-neutral-100
-                            ${rounded ? 'rounded-xl' : ''}
-                            cursor-default
+                            relative
+                            ${renderItem ? '' : 'overflow-hidden bg-neutral-100'}
+                            ${!renderItem && rounded ? 'rounded-xl' : ''}
+                            ${renderItem ? '' : 'cursor-default'}
                         `}
-                        style={{ aspectRatio: getAspectRatio(imageItem.src, globalIndex) }}
+                        style={{ aspectRatio }}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ 
@@ -130,15 +148,24 @@ export default function MasonryGallery({
                             duration: 0.4,
                         }}
                     >
-                        <Image
-                            src={imageItem.src}
-                            alt={altTexts?.[globalIndex] || `${altTextPrefix} ${globalIndex + 1}`}
-                            fill
-                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                            className="object-contain"
-                            quality={85}
-                            loading={globalIndex === 0 ? 'eager' : 'lazy'}
-                        />
+                        {renderItem ? (
+                            renderItem({
+                                src: imageItem.src,
+                                index: globalIndex,
+                                alt: altText,
+                                aspectRatio,
+                            })
+                        ) : (
+                            <Image
+                                src={imageItem.src}
+                                alt={altText}
+                                fill
+                                sizes={imageSizes}
+                                className="object-contain"
+                                quality={85}
+                                loading={globalIndex === 0 ? 'eager' : 'lazy'}
+                            />
+                        )}
                     </motion.div>
                 );
             })}

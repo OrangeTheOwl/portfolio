@@ -11,7 +11,7 @@ export default function HeroSection({ locale }: HeroSectionProps) {
 	const text = getCopy(locale);
 
 	return (
-		<section className="relative isolate overflow-hidden bg-gradient-to-b from-white via-white to-neutral-50 py-20 sm:py-24">
+		<section className="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-gradient-to-b from-white via-white to-neutral-50 py-8 sm:py-10">
 			<HeroLineBackground />
 
 			<div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

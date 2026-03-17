@@ -61,7 +61,7 @@ export default function ProjectCard({ project, locale, priority = false, onCardC
       aria-label={template(text.cards.project.openDetailsAria, { title })}
       whileHover={{ 
         y: -8,
-        scale: 1.02,
+        scale: 1.015,
         transition: { 
           duration: 0.3,
           ease: [0.25, 0.1, 0.25, 1],
@@ -69,7 +69,7 @@ export default function ProjectCard({ project, locale, priority = false, onCardC
       }}
       whileTap={{ scale: 0.98 }}
     >
-      <div className="relative h-72 w-full overflow-hidden bg-neutral-100">
+      <div className="relative h-64 w-full overflow-hidden bg-neutral-100 sm:h-72">
         {primaryImage ? (
           <motion.div
             className="relative h-full w-full"
@@ -83,16 +83,15 @@ export default function ProjectCard({ project, locale, priority = false, onCardC
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 896px"
               className="object-cover"
               priority={priority}
+              loading={priority ? "eager" : "lazy"}
               quality={85}
             />
           </motion.div>
         ) : (
-          <div className="flex h-full w-full flex-col justify-between bg-gradient-to-br from-neutral-100 via-white to-primary-50 p-6">
-            <Badge className="w-fit border-neutral-200 bg-white text-neutral-700">{text.cards.project.caseStudy}</Badge>
-            <div className="space-y-2">
-              <p className="text-sm font-medium uppercase tracking-[0.18em] text-neutral-500">{text.cards.project.previewUnavailable}</p>
-              <h3 className="text-2xl font-bold text-dark-900">{title}</h3>
-            </div>
+          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-neutral-100 via-white to-primary-50 p-6 text-center">
+            <p className="text-3xl font-extrabold uppercase tracking-[0.14em] text-dark-900/85 sm:text-4xl">
+              Coming Soon
+            </p>
           </div>
         )}
 

@@ -237,14 +237,14 @@ export default function Navbar() {
           rounded-2xl border border-neutral-200
         `}
       >
-        <div className="flex items-center justify-between px-6 py-3">
+        <div className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center px-6 py-3">
           
           <button
             onClick={() => {
               window.scrollTo({ top: 0, behavior: "smooth" });
               setActiveSection("");
             }}
-            className="text-xl font-bold flex items-center gap-2 group"
+            className="group flex items-center gap-2 justify-self-start text-xl font-bold"
           >
             <span className="text-primary-500 group-hover:text-primary-600 transition-colors duration-200">
               {PERSONAL_INFO.firstName}
@@ -254,7 +254,7 @@ export default function Navbar() {
             </span>
           </button>
 
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 justify-self-center">
             {primaryNavItems.map((item) => (
               <button
                 key={item.id}
@@ -283,7 +283,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 justify-self-end">
             {renderLanguageToggle("compact")}
 
             <button

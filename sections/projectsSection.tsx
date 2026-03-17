@@ -3,13 +3,14 @@
 import { useState } from 'react';
 import { motion, Variants } from 'framer-motion';
 import ProjectCard from "@/components/cards/ProjectCard";
-import DetailsCard from "@/components/cards/DetailsCard";
 import SectionHeading from '@/components/ui/SectionHeading';
 import { UI_CONFIG } from '@/data/constants';
 import { projects } from "@/data/projects";
 import { getCopy, getTranslatedProject, Locale } from '@/lib/i18n';
+import { cn } from '@/lib/utils';
 import { Project } from '@/types/project';
 import { Experience } from '@/types/experience';
+import DetailsCard from '@/components/cards/DetailsCard';
 
 interface ProjectsSectionProps {
   locale: Locale;
@@ -67,10 +68,14 @@ export default function ProjectsSection({ locale }: ProjectsSectionProps) {
             />
           </motion.div>
 
-          <div className="space-y-8">
+          <div className="space-y-10">
             {localizedProjects.slice(0, UI_CONFIG.maxProjectsOnHomepage).map((project, index) => (
               <motion.div
                 key={project.id}
+                className={cn(
+                  "flex w-full justify-center",
+                  index % 2 === 0 ? "lg:justify-start" : "lg:justify-end",
+                )}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ 
@@ -80,12 +85,19 @@ export default function ProjectsSection({ locale }: ProjectsSectionProps) {
                 }}
                 variants={item}
               >
-                <ProjectCard 
-                  project={project}
-                  locale={locale}
-                  priority={index === 0} // First project loads immediately
-                  onCardClick={() => setSelectedCard(project)}
-                />
+                <div
+                  className={cn(
+                    "w-full max-w-[52rem] transition-transform duration-300",
+                    index % 2 === 0 ? "lg:-translate-x-2" : "lg:translate-x-2",
+                  )}
+                >
+                  <ProjectCard 
+                    project={project}
+                    locale={locale}
+                    priority={index < 2} // First two cards can be above the fold on large screens
+                    onCardClick={() => setSelectedCard(project)}
+                  />
+                </div>
               </motion.div>
             ))}
           </div>
