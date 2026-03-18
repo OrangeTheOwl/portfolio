@@ -15,7 +15,7 @@ export const galleryItems: GalleryItem[] = [
 		title: "Successful bouldering",
 		description: "Working on my puzzle solving skills in the climbing gym.",
 		category: GalleryCategory.Fitness,
-		image: "/images/projects/hobby02.jpg",
+		image: "/images/gallery/hobby02.jpg",
 		tags: ["Hobby", "Climbing"],
 	},
 	{
@@ -23,7 +23,7 @@ export const galleryItems: GalleryItem[] = [
 		title: "Motorcycling",
 		description: "Stranded in the middle of nowhere because my spark plug decided to explode.",
 		category: GalleryCategory.Other,
-		image: "/images/projects/hobby04.jpg",
+		image: "/images/gallery/hobby04.jpg",
 		tags: ["Hobby", "Travel"],
 	},
 	{
@@ -31,7 +31,7 @@ export const galleryItems: GalleryItem[] = [
 		title: "Hand embroidery",
 		description: "A small hand-embroidered piece made as practice.",
 		category: GalleryCategory.Creative,
-		image: "/images/projects/hobby03.jpg",
+		image: "/images/gallery/hobby03.jpg",
 		tags: ["Hobby", "Arts & Crafts"],
 	},
 	{
@@ -39,7 +39,7 @@ export const galleryItems: GalleryItem[] = [
 		title: "Failed bouldering attempt",
 		description: "Discovering fall damage.",
 		category: GalleryCategory.Fitness,
-		image: "/images/projects/hobby01.gif",
+		image: "/images/gallery/hobby01.gif",
 		tags: ["Hobby", "Climbing"],
 	},
 	{
@@ -47,7 +47,7 @@ export const galleryItems: GalleryItem[] = [
 		title: "Masterchef",
 		description: "A culinary masterpiece that I prepared for my friends.",
 		category: GalleryCategory.Other,
-		image: "/images/projects/hobby06.jpg",
+		image: "/images/gallery/hobby06.jpg",
 		tags: ["Hobby", "Cooking"],
 	},
 	{
@@ -55,7 +55,7 @@ export const galleryItems: GalleryItem[] = [
 		title: "Being a tourist",
 		description: "Saying hello to the reindeer.",
 		category: GalleryCategory.Other,
-		image: "/images/projects/hobby05.jpg",
+		image: "/images/gallery/hobby05.jpg",
 		tags: ["Hobby", "Tourism"],
 	},
 	{
@@ -63,7 +63,7 @@ export const galleryItems: GalleryItem[] = [
 		title: "Lapinkansa article",
 		description: "Featured in Laplands leading newspaper as a member of a growing startup.",
 		category: GalleryCategory.Article,
-		image: "/images/projects/article01.png",
+		image: "/images/gallery/article01.png",
 		date: "2026-01-15",
 		externalLink: "https://www.lapinkansa.fi/sallan-lukiosta-valmistunut-zachary-burda-elaa-une/12478118",
 		tags: ["Professional", "Article", "Lapinkansa"],

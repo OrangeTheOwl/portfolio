@@ -41,7 +41,7 @@ export const SITE_METADATA = {
   title: 'Vid Šafranko - Full-Stack Developer Portfolio',
   description: 'Full-stack developer specializing in React, Flutter, and infrastructure. View my projects, experience, and technical skills.',
   url: 'https://vidsafranko.com',
-  // image: '/images/og-image.png', // Open Graph image for social sharing
+  image: '/images/profile/og-image.png', // Open Graph image for social sharing
   keywords: [
     'full-stack developer',
     'react developer',

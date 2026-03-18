@@ -1,0 +1,47 @@
+# Vid Šafranko
+
+> Full-Stack Developer & Infrastructure Engineer based in Helsinki, Finland.
+> Available for new opportunities.
+
+Vid Šafranko is a software developer specialising in full-stack web development and infrastructure engineering. He builds scalable web and mobile applications using modern frameworks and cloud platforms. He is currently based in Helsinki, Finland and open to new professional opportunities.
+
+## About
+
+Vid is a full-stack developer with hands-on experience in professional SaaS products, hackathon projects, and infrastructure work. He has worked across the full development lifecycle — from architecture and development through to deployment and maintenance — on both mobile and web platforms.
+
+## Skills
+
+**Languages:** TypeScript (Advanced), JavaScript (Advanced), Dart (Advanced), Python (Intermediate)
+
+**Frameworks:** Next.js (Advanced), React (Advanced), Flutter (Advanced), Tailwind CSS (Advanced)
+
+**Tools & Platforms:** Firebase / Firestore, Google Cloud Platform, Node.js, OpenAI API, Git, Stripe, Vercel
+
+**Infrastructure:** Server and network administration, hardware troubleshooting, PC building, network cabling, server rack installation
+
+## Experience
+
+**Fisofi** — Full Stack Developer (Sep 2025 – Apr 2026)
+Led development of a cross-platform mobile application using Flutter and Dart. Integrated Firebase services, managed deployments to iOS, Android and web, conducted code reviews, and created technical documentation.
+
+**Valji d.o.o.** — Student Intern (May 2020 – Sep 2025)
+IT support, internal tooling development in C#, C++ and Python, server and network administration, and hardware infrastructure planning.
+
+## Notable Projects
+
+**Junction 2025 — 2nd Place (Wolt Challenge)**
+AI-powered food delivery platform with vision-based dish recognition, TikTok-style food discovery feed, calendar-aware meal ordering, and AI-planned event catering. Built with Next.js, OpenAI API, Google Calendar API.
+
+**Agentic Era Hackathon — Helsinki**
+Web application using AI agents to manage fitness studio operations: class scheduling, instructor management, financial calculations. Built with Next.js, TypeScript, OpenAI API.
+
+**Fisofi**
+Production B2B SaaS platform. Cross-platform mobile and web application built with Flutter, Dart, Firebase/Firestore, and Google Cloud Platform.
+
+## Contact & Links
+
+- **Website:** https://vidsafranko.com
+- **GitHub:** https://github.com/orangetheowl
+- **LinkedIn:** https://www.linkedin.com/in/vid-safranko/
+- **Location:** Helsinki, Finland
+- **Availability:** Open to opportunities
