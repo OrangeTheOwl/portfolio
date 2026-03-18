@@ -68,7 +68,7 @@ export default function DetailsCard({ item, locale, onClose }: DetailsCardProps)
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2 }}
                         onClick={onClose}
-                        className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50"
+                        className="fixed inset-0 bg-black/70 z-50"
                     />
 
                     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">

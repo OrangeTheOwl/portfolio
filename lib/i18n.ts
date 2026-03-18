@@ -215,7 +215,7 @@ const copy: Record<Locale, CopyDictionary> = {
         title: "Open to thoughtful product work and technical collaboration",
         description:
           "If you want to discuss a role, a build, or a system that needs tightening up, use any configured channel below.",
-        emailMe: "Email me",
+        emailMe: "Email",
         github: "GitHub",
         linkedin: "LinkedIn",
         configHint:
@@ -344,7 +344,7 @@ const copy: Record<Locale, CopyDictionary> = {
         title: "Odprt za smiselno produktno delo in tehnično sodelovanje",
         description:
           "Če želiš govoriti o vlogi, projektu ali sistemu, ki potrebuje izboljšave, uporabi spodnje kanale.",
-        emailMe: "Pošlji e-pošto",
+        emailMe: "E-pošta",
         github: "GitHub",
         linkedin: "LinkedIn",
         configHint:

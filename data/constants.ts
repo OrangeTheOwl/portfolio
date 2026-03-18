@@ -9,7 +9,7 @@ export const PERSONAL_INFO = {
   lastName:"Šafranko",
   title: 'Full-Stack Developer & Infrastructure Engineer',
   tagline: 'Building scalable applications and reliable systems',
-  email: process.env.PERSONAL_EMAIL || '', // Set in .env.local
+  email: process.env.NEXT_PUBLIC_PERSONAL_EMAIL || '', // Set in .env.local
   location: 'Helsinki, Finland',
   availability: 'Open to opportunities', // or 'Currently employed', 'Freelancing', etc.
 } as const;

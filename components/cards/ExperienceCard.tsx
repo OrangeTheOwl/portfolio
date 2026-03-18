@@ -30,6 +30,7 @@ export default function ExperienceCard({ experience, locale, onSelect }: Experie
 
 	return (
 		<motion.div
+			layoutId={`experience-container-${experience.id}`}
 			className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-lg"
 			whileHover={{ y: -4 }}
 			onClick={onSelect}
