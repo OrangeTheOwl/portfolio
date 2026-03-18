@@ -9,8 +9,8 @@ export const PERSONAL_INFO = {
   lastName:"Šafranko",
   title: 'Full-Stack Developer & Infrastructure Engineer',
   tagline: 'Building scalable applications and reliable systems',
-  email: 'your.email@example.com',
-  location: 'City, Country',
+  email: process.env.PERSONAL_EMAIL || '', // Set in .env.local
+  location: 'Helsinki, Finland',
   availability: 'Open to opportunities', // or 'Currently employed', 'Freelancing', etc.
 } as const;
 
@@ -18,8 +18,8 @@ export const PERSONAL_INFO = {
 // SOCIAL LINKS
 // ============================================
 export const SOCIAL_LINKS = {
-  github: 'https://github.com/yourusername',
-  linkedin: 'https://linkedin.com/in/yourprofile',
+  github: 'https://github.com/orangetheowl',
+  linkedin: 'https://www.linkedin.com/in/vid-safranko/',
 } as const;
 
 // ============================================
@@ -56,11 +56,11 @@ export const SITE_METADATA = {
 // CONTACT FORM CONFIGURATION
 // ============================================
 export const CONTACT_CONFIG = {
-  recipientEmail: 'your.email@example.com', // Where form submissions go
+  recipientEmail: process.env.RESEND_RECIPIENT_EMAIL, // Where form submissions go
   maxMessageLength: 1000,
   requiredFields: ['name', 'email', 'message'],
   successMessage: 'Thanks for reaching out! I\'ll get back to you soon.',
-  errorMessage: 'Something went wrong. Please try emailing me directly at your.email@example.com',
+  errorMessage: 'Something went wrong. Please try emailing me directly at ' + process.env.RESEND_RECIPIENT_EMAIL,
 } as const;
 
 // ============================================

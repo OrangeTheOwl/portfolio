@@ -1,4 +1,3 @@
-import AboutSection from "@/sections/AboutSection";
 import ContactSection from "@/sections/ContactSection";
 import ExperienceSection from "@/sections/ExperienceSection";
 import GallerySection from "@/sections/GallerySection";
@@ -22,7 +21,6 @@ export default async function Home({ searchParams }: PageProps) {
       <ProjectsSection locale={locale} />
       <ExperienceSection locale={locale} />
       <GallerySection locale={locale} />
-      <AboutSection locale={locale} />
       <ContactSection locale={locale} />
     </main>
   );

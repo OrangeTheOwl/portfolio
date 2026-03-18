@@ -8,7 +8,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { CloseIcon, GlobeIcon, MenuIcon, MoonIcon, SunIcon } from "@/components/ui/Icons";
 
-const NAV_IDS = ["projects", "experience", "gallery", "about", "contact"] as const;
+const NAV_IDS = ["projects", "experience", "gallery", "contact"] as const;
 type Theme = "light" | "dark";
 
 export default function Navbar() {

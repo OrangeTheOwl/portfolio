@@ -1,8 +1,11 @@
+"use client";
+
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { PERSONAL_INFO, SOCIAL_LINKS } from "@/data/constants";
 import { getCopy, Locale } from "@/lib/i18n";
 import { isConfiguredValue } from "@/lib/utils";
+import { useState } from "react";
 
 export default function ContactSection({ locale }: { locale: Locale }) {
 	const text = getCopy(locale);
@@ -20,7 +23,7 @@ export default function ContactSection({ locale }: { locale: Locale }) {
 						description={text.sections.contact.description}
 					/>
 
-					<div className="mt-10 flex flex-wrap items-center gap-3">
+					<div className="mt-10 flex flex-wrap items-center gap-3 mx-auto justify-center">
 						{email ? <Button href={`mailto:${email}`}>{text.sections.contact.emailMe}</Button> : null}
 						{github ? (
 							<Button href={github} rel="noopener noreferrer" target="_blank" variant="ghost">
@@ -32,7 +35,10 @@ export default function ContactSection({ locale }: { locale: Locale }) {
 								{text.sections.contact.linkedin}
 							</Button>
 						) : null}
+            
 					</div>
+          
+          <ContactForm locale={locale} />
 
 					{!email && !github && !linkedin ? (
 						<p className="mt-6 text-sm font-medium text-neutral-500">
@@ -43,4 +49,52 @@ export default function ContactSection({ locale }: { locale: Locale }) {
 			</div>
 		</section>
 	);
+}
+
+export function ContactForm({ locale }: { locale: Locale }) {
+  const text = getCopy(locale);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("loading");
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    const json = await res.json();
+
+    if (!res.ok) {
+      setErrorMsg(json.error ?? "Something went wrong.");
+      setStatus("error");
+    } else {
+      setStatus("success");
+    }
+  }
+
+  if (status === "success") {
+    return <p className="mt-6 text-sm font-medium text-green-600">Message sent! I'll get back to you soon.</p>;
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-4 max-w-lg mx-auto">
+      <input required name="name" placeholder="Your name" className="rounded-xl border border-neutral-200 px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900" />
+      <input required name="email" type="email" placeholder="your@email.com" className="rounded-xl border border-neutral-200 px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900" />
+      <textarea required name="message" rows={5} placeholder="Your message..." className="rounded-xl border border-neutral-200 px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-neutral-900 resize-none" />
+      {status === "error" && <p className="text-sm text-red-500">{errorMsg}</p>}
+      <Button type="submit" disabled={status === "loading"} className="w-fit mx-auto">
+        {status === "loading" ? "Sending…" : "Send message"}
+      </Button>
+    </form>
+  );
 }
