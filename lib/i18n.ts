@@ -171,7 +171,7 @@ const copy: Record<Locale, CopyDictionary> = {
     sections: {
       projects: {
         eyebrow: "Selected work",
-        title: "Projects that move from concept to usable product",
+        title: "Projects that moved from concept to usable product",
         description:
           "A mix of hackathon builds, client work, and production product engineering. Each card opens a fuller case study with context, stack, and supporting screenshots where available.",
       },
@@ -191,9 +191,9 @@ const copy: Record<Locale, CopyDictionary> = {
       },
       gallery: {
         eyebrow: "Gallery",
-        title: "Snapshots from prototypes, interfaces, and delivery work",
+        title: "Snapshots from my life used to describe me and my work",
         description:
-          "A lightweight visual layer for the portfolio that highlights shipped screens, supporting assets, and selected product explorations.",
+          "Get to know me as more than a list of projects and roles, but as a person with a unique perspective and approach.",
         openReference: "Open reference",
       },
       about: {
@@ -212,14 +212,14 @@ const copy: Record<Locale, CopyDictionary> = {
       },
       contact: {
         eyebrow: "Contact",
-        title: "Open to thoughtful product work and technical collaboration",
+        title: "Open to collaborating on product development and technical projects",
         description:
-          "If you want to discuss a role, a build, or a system that needs tightening up, use any configured channel below.",
+          "If you want to discuss a role, a build, or a system that needs tightening up, use any of the channels below.",
         emailMe: "Email",
         github: "GitHub",
         linkedin: "LinkedIn",
         configHint:
-          "Contact links are not configured yet. Update the personal and social constants to enable direct reach-out actions here.",
+          "Contact links are not configured yet.",
       },
     },
     cards: {
@@ -270,7 +270,7 @@ const copy: Record<Locale, CopyDictionary> = {
         about: "O meni",
         contact: "Kontakt",
       },
-      talkButton: "Pogovoriva se",
+      talkButton: "Kontakt",
       language: "Jezik",
       theme: {
         light: "Preklopi na svetli način",
@@ -320,14 +320,14 @@ const copy: Record<Locale, CopyDictionary> = {
       },
       gallery: {
         eyebrow: "Galerija",
-        title: "Utrinki prototipov, vmesnikov in izvedbe",
+        title: "Utrinki iz mojega življenja, ki opisujejo mene in moje delo",
         description:
-          "Vizualni sloj portfelja, ki izpostavi pripravljene zaslone, podporne materiale in izbrane produktne raziskave.",
+          "Spoznaj me kot več kot le seznam projektov in vlog, temveč kot osebo z edinstvenimi pogledi in pristopom.",
         openReference: "Odpri povezavo",
       },
       about: {
         eyebrow: "O meni",
-        title: "Način razmišljanja, oblikovan z razvojem in infrastrukturo",
+        title: "Ustvarjalni način razmišljanja, oblikovan z razvojem produktov in infrastrukturo",
         description:
           "Moja pot se je začela s praktično IT podporo in sistemskim delom, nato pa se je razvila v full-stack razvoj produktov in večplatformskih aplikacij.",
         paragraphOne:
@@ -341,14 +341,14 @@ const copy: Record<Locale, CopyDictionary> = {
       },
       contact: {
         eyebrow: "Kontakt",
-        title: "Odprt za smiselno produktno delo in tehnično sodelovanje",
+        title: "Odprt za razvoj produktov in tehnično sodelovanje",
         description:
           "Če želiš govoriti o vlogi, projektu ali sistemu, ki potrebuje izboljšave, uporabi spodnje kanale.",
         emailMe: "E-pošta",
         github: "GitHub",
         linkedin: "LinkedIn",
         configHint:
-          "Kontaktne povezave še niso nastavljene. Posodobi osebne in socialne nastavitve, da omogočiš neposreden stik.",
+          "Kontaktne povezave še niso nastavljene.",
       },
     },
     cards: {
@@ -400,31 +400,27 @@ const slProjectTranslations: Record<string, { title?: string; description?: stri
   "project-2": {
     title: "Junction 2025",
     description:
-      "Na Junction 2025 v Helsinkih je naša ekipa v Wolt izzivu zgradila AI prototip naslednje generacije platforme za dostavo hrane. Razvili smo spletno aplikacijo po navdihu Wolta in jo nadgradili z AI funkcijami. Uporabniki lahko naložijo fotografijo hrane za prepoznavo jedi, samodejno ustvarijo nakupovalni seznam sestavin ter odkrivajo jedi prek TikTok-stilskega feeda. Platforma vključuje tudi naročanje obrokov glede na koledar, AI planiranje cateringa za dogodke in miniigro za napoved časa dostave.",
+      "Na Junction 2025 v Helsinkih je naša ekipa v Wolt izzivu zgradila AI prototip naslednje generacije platforme za dostavo hrane.\n\nRazvili smo spletno aplikacijo po navdihu Wolta in jo nadgradili z AI funkcijami. Uporabniki lahko naložijo fotografijo hrane za prepoznavo jedi, samodejno ustvarijo nakupovalni seznam sestavin ter odkrivajo jedi prek TikTok-stilskega feeda. Platforma vključuje tudi naročanje obrokov glede na koledar, AI planiranje cateringa za dogodke in miniigro za napoved časa dostave.",
   },
   "project-3": {
-    title: "Undercover igra",
-    description:
-      "Klon igre Undercover je preprost mobilni projekt v Flutterju. Namen projekta je bil praktično spoznati razvoj v Flutterju, njegov delovni proces in pridobiti praktične izkušnje pri večplatformskem mobilnem razvoju.\nAplikacija poustvari osnovne mehanike družabne igre Undercover, s poudarkom na osnovni igralni logiki in uporabniškem vmesniku.",
-  },
-  "project-4": {
     title: "Fisofi",
     description:
-      "Sodeloval sem pri mobilni in spletni aplikaciji Fisofi, B2B SaaS platformi, ki se uporablja v produkciji. Prispeval sem k razvoju in vzdrževanju funkcionalnosti ter izboljšanju uporabnosti in zanesljivosti za poslovne uporabnike.\nDelo je vključevalo sodelovanje na produkcijski kodi in izkušnje z realnimi izzivi razvoja, postavitve in skaliranja SaaS produktov.",
+      "Sodeloval sem pri mobilni in spletni aplikaciji Fisofi, B2B SaaS platformi, ki se uporablja v produkciji. Prispeval sem k razvoju in vzdrževanju funkcionalnosti ter izboljšanju uporabnosti in zanesljivosti za poslovne uporabnike.\n\nDelo je vključevalo sodelovanje na produkcijski kodi in izkušnje z realnimi izzivi razvoja, postavitve in skaliranja SaaS produktov.",
+  },
+  "project-4": {
+    title: "Undercover igra",
+    description:
+      "Klon igre Undercover je preprost mobilni projekt v Flutterju. Namen projekta je bil praktično spoznati razvoj v Flutterju, njegov delovni proces in pridobiti praktične izkušnje pri večplatformskem mobilnem razvoju.\n\nAplikacija poustvari osnovne mehanike družabne igre Undercover, s poudarkom na osnovni igralni logiki in uporabniškem vmesniku.",
   },
   "project-5": {
     title: "Valji d.o.o.",
     description: "Kmalu na voljo",
-  },
-  "project-6": {
-    title: "BODIFIT",
-    description: "Kmalu na voljo",
-  },
+  }
 };
 
 const slExperienceTranslations: Record<string, { position?: string; responsibilities?: string[] }> = {
   "company-1": {
-    position: "Študentski praktikant",
+    position: "Študent",
     responsibilities: [
       "IT podpora in vzdrževanje sistemov podjetja",
       "Pomoč pri razvoju internih orodij in aplikacij",
@@ -454,20 +450,36 @@ const slExperienceTranslations: Record<string, { position?: string; responsibili
 
 const slGalleryTranslations: Record<string, { title?: string; description?: string }> = {
   "gallery-1": {
-    title: "SweatAI uvodni potek",
-    description: "Zgodnji produktni pogledi iz hackathona Agentic Era za koncept upravljanja fitnes studia.",
+    title: "Junction 2. mesto",
+    description: "Ena od zmagovalnih ekip na Junction hackathonu za Wolt izziv.",
   },
   "gallery-2": {
-    title: "Koncept nadzorne plošče studia",
-    description: "Raziskave operativne nadzorne plošče za urnike in planiranje virov.",
+    title: "Uspešno plezanje",
+    description: "Vadim reševanje ugank v plezalni telovadnici.",
   },
   "gallery-3": {
-    title: "Pogled na agentni potek",
-    description: "Bližji pogled na avtomatiziran vmesnik delovnega toka, uporabljen med hackathonom.",
+    title: "Motociklizem",
+    description: "Obtičal sem sredi ničesar, ker mi je svečka odločila eksplodirati.",
   },
   "gallery-4": {
-    title: "Vizualna identiteta Valji",
-    description: "Preprost brand material ob časovnici infrastrukturnih in podpornih izkušenj.",
+    title: "Ročna vez",
+    description: "Majhno ročno vezeno delo.",
+  },
+  "gallery-5": {
+    title: "Neuspešen poskus plezanja",
+    description: "Odkrivanje posledic padca.",
+  },
+  "gallery-6": {
+    title: "Masterchef",
+    description: "Kulinarsko mojstrstvo, ki sem ga pripravil za svoje prijatelje.",
+  },
+  "gallery-7": {
+    title: "Biti turist",
+    description: "Pozdravljanje severnih jelenov.",
+  },
+  "gallery-8": {
+    title: "Članek Lapinkansa",
+    description: "Predstavljen v vodilnem laponskem časopisu kot član rastočega start-up podjetja.",
   },
 };
 

@@ -28,7 +28,7 @@ export const galleryItems: GalleryItem[] = [
 	},
 	{
 		id: "gallery-4",
-		title: "Hand emroidery",
+		title: "Hand embroidery",
 		description: "A small hand-embroidered piece made as practice.",
 		category: GalleryCategory.Creative,
 		image: "/images/projects/hobby03.jpg",

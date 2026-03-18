@@ -4,7 +4,7 @@ import { ProjectType } from "@/types/project";
 // PERSONAL INFORMATION
 // ============================================
 export const PERSONAL_INFO = {
-  name: 'Vid Safranko',
+  name: 'Vid Šafranko',
   firstName:"Vid",
   lastName:"Šafranko",
   title: 'Full-Stack Developer & Infrastructure Engineer',
@@ -38,10 +38,10 @@ export const NAV_ITEMS = [
 // SITE METADATA (for SEO)
 // ============================================
 export const SITE_METADATA = {
-  title: 'Your Name - Full-Stack Developer Portfolio',
+  title: 'Vid Šafranko - Full-Stack Developer Portfolio',
   description: 'Full-stack developer specializing in React, Flutter, and infrastructure. View my projects, experience, and technical skills.',
-  url: 'https://yourportfolio.com',
-  image: '/images/og-image.png', // Open Graph image for social sharing
+  url: 'https://vidsafranko.com',
+  // image: '/images/og-image.png', // Open Graph image for social sharing
   keywords: [
     'full-stack developer',
     'react developer',

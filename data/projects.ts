@@ -10,7 +10,7 @@ export const projects: Project[] = [
     liveDemoUrl: 'https://my-fitness-ai-nine.vercel.app',
     githubUrl: 'https://github.com/OrangeTheOwl/sweatai',
     projectType: ProjectType.Hackathon,    
-    date: '2026-11-07',
+    date: '2025-11-07',
   },
   {
     id: 'project-2',
